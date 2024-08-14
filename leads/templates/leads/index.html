@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;   /* Center vertically */
+        }
+
+        .centered-div {
+            width: 300px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border: 2px solid #ccc;
+            text-align: center;
+            line-height: 200px; /* Center text vertically within the div */
+            font-size: 20px;
+        }
+        .hello-world {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world">
+        <h1>{{company}}</h1>
+        <h3>Since {{since}}</h3>
+        <p>Vision<br>{{vision}}</p>
+        <li>
+        {% for ld in leads %}
+            <ul>Last Name: {{ld.last_name}}, Agent: {{ld.agent}}</ul>
+        {% endfor %}
+        </li>
+    </div>
+</body>
+</html>
