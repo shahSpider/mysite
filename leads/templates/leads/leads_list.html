@@ -25,22 +25,21 @@
             line-height: 200px; /* Center text vertically within the div */
             font-size: 20px;
         }
-        .hello-world {
+        .leads-section {
             background-color: black;
             color: white;
+            padding: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="hello-world">
-        <h1>{{company}}</h1>
-        <h3>Since {{since}}</h3>
-        <p>Vision<br>{{vision}}</p>
-        <li>
+    <div class="leads-section">
+        <h1>Got Leads</h1>
+        <ul>
         {% for ld in leads %}
-            <ul>Last Name: {{ld.last_name}}, Agent: {{ld.agent}}</ul>
+            <li><a href="/leads/{{ld.id}}">{{ld.last_name}}</a></li>
         {% endfor %}
-        </li>
+        </ul>
     </div>
 </body>
 </html>
