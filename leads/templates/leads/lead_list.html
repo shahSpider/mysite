@@ -34,10 +34,16 @@
 </head>
 <body>
     <div class="leads-section">
+        <a href="{% url 'leads:lead-create' %}">Create New Lead</a>
         <h1>Got Leads</h1>
         <ul>
         {% for ld in leads %}
-            <li><a href="/leads/{{ld.id}}">{{ld.last_name}}</a></li>
+            <li><a href="{% url 'leads:lead-detail' ld.pk%}">{{ld.last_name}}</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="{% url 'leads:lead-update' ld.pk %}">Update</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="{% url 'leads:lead-delete' ld.pk %}" style="background-color: red;">Delete</a>
+            </li>
         {% endfor %}
         </ul>
     </div>

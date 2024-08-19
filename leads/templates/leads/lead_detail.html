@@ -10,7 +10,9 @@
 </head>
 <body>
     <div>
-        {{lead.first_name}} {{lead.last_name}}
+        <a href="{% url 'leads:lead-list' %}">Go back to Leads</a>
+        <p>Lead From: {{lead.first_name}} {{lead.last_name}}, {{lead.age}} years old</p>
+        <p>Agent Responsible for this lead: {{lead.agent}}</p>
     </div>
 </body>
 </html>
