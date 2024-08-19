@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>{{lead}}</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <div>
         <a href="{% url 'leads:lead-list' %}">Go back to Leads</a>
         <p>Lead From: {{lead.first_name}} {{lead.last_name}}, {{lead.age}} years old</p>
         <p>Agent Responsible for this lead: {{lead.agent}}</p>
     </div>
-</body>
-</html>
+{% endblock content %}

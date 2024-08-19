@@ -4,5 +4,5 @@ from setup.views import home
 app_name = "setup"
 
 urlpatterns = [
-    path('', home)
+    path('', home, name="home-page")
 ]
