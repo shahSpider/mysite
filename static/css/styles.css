@@ -1,0 +1,16 @@
+.leads-section {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;   /* Center vertically */
+    background-color: orange;
+    color: white;
+    padding: 200px;
+}
+.footer-section {
+    text-align: right;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+}
