@@ -137,3 +137,5 @@ STATIC_ROOT = "static_root"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'setup.User'
+LOGIN_REDIRECT_URL = '/leads/'
+LOGOUT_REDIRECT_URL = ''
